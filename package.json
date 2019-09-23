@@ -2,6 +2,11 @@
   "name": "localist-viewer",
   "version": "0.0.1",
   "description": "Uses localist api to view events",
+  "license": "GPLv2",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/philwilliammee/localist-viewer"
+  },
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^16.9.0"
@@ -27,7 +32,7 @@
     "email": "philwilliammee@gmail.com"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel/cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
