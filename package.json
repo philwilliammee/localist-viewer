@@ -4,8 +4,8 @@
   "description": "Uses localist api to view events",
   "license": "GPLv2",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/philwilliammee/localist-viewer"
+    "type": "git",
+    "url": "https://github.com/philwilliammee/localist-viewer"
   },
   "main": "build/index.js",
   "peerDependencies": {
@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "babel-polyfill": "^6.26.0",
     "build-url": "^1.3.3",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
@@ -38,6 +37,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^6.4.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
   }
