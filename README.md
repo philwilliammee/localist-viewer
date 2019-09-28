@@ -1,8 +1,16 @@
 # Localist Viewer
 
-## [Demo Page](https://philwilliammee.github.io/localist-viewer/)
+## [Demo Page](https://philwilliammee.github.io/localist-viewer/) [NPM localist-viewer] ([Demo Page](https://philwilliammee.github.io/localist-viewer/))
+
+CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script>
+```
 
 ## Usage
+
+
 
 The exported function takes the following arguments.
 
