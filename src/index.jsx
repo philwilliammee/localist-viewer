@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import Localist from './localist';
+import LocalistComponent from './localist';
 
-const run = props => {
+const localistRun = props => {
     const {
         target,
         heading,
@@ -28,7 +28,7 @@ const run = props => {
         console.warn(`invalid target: ${target}`);
         return;
     }
-    ReactDOM.render(<Localist
+    ReactDOM.render(<LocalistComponent
         target= {target}
         depts= {depts}
         entries= {entries}
@@ -52,7 +52,7 @@ const run = props => {
 }
 // Add localist to the dom.
 if (typeof window !== 'undefined'){
-    window.Localist = run;
+    window.localistViewer = localistRun;
 }
-
-export default run;
+export {LocalistComponent};
+export default localistRun;

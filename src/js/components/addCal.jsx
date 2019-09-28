@@ -10,7 +10,7 @@ const buidGoogleStr = (myObj) => {
         'https://calendar.google.com/calendar/event',{
             queryParams: {
                 action: 'TEMPLATE',
-                dates: gDateStart + '/' + gDateStop,
+                dates: `${gDateStart}/${gDateStop}`,
                 details: myObj.description_text.replace(/[\r\n]/g, `<br />`),
                 location: myObj.location,
                 sprop: 'website:events.cornell.edu',

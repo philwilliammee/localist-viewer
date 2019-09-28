@@ -139,9 +139,9 @@ Compact.defaultProps = {
     hideaddcal: 'false',
     truncatedescription: '150',
     thumbnail: 'true',
-    wrapperclass: '', //cwd-card-grid three-card',
-    listclass: '', //cards',
-    itemclass: '', //card',
+    wrapperclass: '',
+    listclass: '',
+    itemclass: '',
     hidedescription: 'false',
     hideimages: 'false',
 

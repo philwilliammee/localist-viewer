@@ -147,10 +147,11 @@ export const getDay = event => {
 
 export const getEventEndTime = event => {
     const endTime = event.event_instances[0].event_instance.end;
+    let time = ''
     if (typeof endTime !== 'undefined' && endTime !== null) {
-        const time = getTimefromDateTime(endTime);
-        return time;
+        time = getTimefromDateTime(endTime);
     }
+    return time
 };
 
 /**
@@ -175,11 +176,11 @@ export const getEventTime = event => {
  * @return {string} The group name.
  */
 export const getGroupName = event => {
-    let group_name = '';
+    let groupName = '';
     if (typeof event.group_name !== 'undefined') {
-        group_name = event.group_name;
+        groupName = event.group_name;
     }
-    return group_name;
+    return groupName;
 };
 
 /**
@@ -241,6 +242,26 @@ export const getDepartment = event => {
 };
 
 /**
+ * An array of the filters event types.
+ * @todo departments are an array get all of the departments.
+ * @param {obj} event The localist Event.
+ * @return {string} The filter text.
+ */
+export const getFiltersType = (event) => {
+    return event.filters.event_types;
+}
+
+/**
+ * Get an array of the filters departments.
+ * @todo departments are an array get all of the departments.
+ * @param {obj} event The localist Event.
+ * @return {string} The filter text.
+ */
+export const getFiltersDepartments = (event) => {
+    return event.filters.departments;
+}
+
+/**
  * Gets the appropriate event type.
  * @todo add support for multiple filter types.
  * @param {obj} event The localist Event.
@@ -262,26 +283,6 @@ export const getEventType = (event, prefCategory) => {
     }
     return eventTypes;
 };
-
-/**
- * An array of the filters event types.
- * @todo departments are an array get all of the departments.
- * @param {obj} event The localist Event.
- * @return {string} The filter text.
- */
-export const getFiltersType = (event) => {
-    return event.filters.event_types;
-}
-
-/**
- * Get an array of the filters departments.
- * @todo departments are an array get all of the departments.
- * @param {obj} event The localist Event.
- * @return {string} The filter text.
- */
-export const getFiltersDepartments = (event) => {
-    return event.filters.departments;
-}
 
 /**
  * Gets start date in compact format.

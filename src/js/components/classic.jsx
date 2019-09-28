@@ -15,9 +15,7 @@ const ClassicInner = props => {
                 <div className="row">
                     <div className="col-sm-12 event-title-and-location">
                         <div>
-                            <a href="${builtData.event.localist_url}"
-                            >{event.title}</a
-                            >
+                            <a href={event.localist_url}>{event.title}</a>
                         </div>
                         <div>
                             <span className="event-date">{date}</span>

@@ -9,9 +9,9 @@ import {
 const buildEventWrapperFilters = (events, filterby) => {
     const filters = {}
     events.map( eventObj => {
-        const event = eventObj.event
-        const group_name = getGroupName(event);
-        const group_id = getGroupId(event);
+        const {event} = eventObj
+        const groupName = getGroupName(event);
+        const groupId = getGroupId(event);
         if (
             filterby === 'type' &&
             event.filters.event_types
@@ -21,7 +21,7 @@ const buildEventWrapperFilters = (events, filterby) => {
                 filters[type.name] = {
                     id: type.id,
                     name: type.name,
-                    filterby: filterby
+                    filterby
                 };
             })
 
@@ -29,22 +29,22 @@ const buildEventWrapperFilters = (events, filterby) => {
             filterby === 'dept' &&
             event.filters.departments
         ) {
-            const departments = event.filters.departments
+            const {departments} = event.filters
             departments.forEach( department => {
                 filters[department.name] = {
                     id: department.id,
                     name: department.name,
-                    filterby: filterby
+                    filterby
                 };
             })
         } else if (
             filterby === 'group' &&
-            group_name !== ''
+            groupName !== ''
         ) {
-            filters[group_name] = {
-                id: group_id,
-                name: group_name,
-                filterby: filterby
+            filters[groupName] = {
+                id: groupId,
+                name: groupName,
+                filterby
             };
         }
     })
