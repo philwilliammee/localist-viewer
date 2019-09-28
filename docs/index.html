@@ -5,18 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css" integrity="sha256-cCazLItaM+Zz5UEzu9HNzlgWhXlvknCzjdE45LBeTns=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body > div > div.row{
+            border: solid 5px #eee;
+        }
+    </style>
     <title>Localist Viewer</title>
 </head>
 
 <body>
-    <h1>Localist Viewer Demo</h1>
-    <div id="feature" class="events-listing cwd-events-style" data-target="feature" data-depts="0" data-entries="3"
-        data-format="modern_compact" data-group="0" data-keyword="" data-addcal="true"
-        data-heading="modern-compact with added classes" data-calendarurl="//events.cornell.edu/api/2.1/events"
-        data-apikey="KLhy2GtuSAGirYGY" data-filterby="group" data-pagination="true"
-        data-wrapperclass="cwd-card-grid three-card" data-listclass="cards" data-itemclass="card" data-days="2">
+    <div class='container'>
+        <h1>Localist Viewer Demo</h1>
+        <div class='row'>
+            <div id="feature"
+                class="events-listing cwd-events-style"
+                data-target="feature"
+                data-depts="0"
+                data-entries="3"
+                data-format="modern_compact"
+                data-group="0"
+                data-keyword=""
+                data-heading="Upcoming Events Demo"
+                data-calendarurl="//events.cornell.edu/api/2.1/events"
+                data-apikey=""
+                data-daysahead="2"
+                data-hidedescription="false"
+                data-truncatedescription="200"
+                data-hideimages="false"
+                data-hideaddcal="true"
+                data-hidepagination="false"
+                data-filterby="none"
+                data-wrapperclass="cwd-card-grid three-card"
+                data-listclass="cards"
+                data-itemclass="card"
+                >
+            </div>
+        </div>
+
+        <p>@todo write documentation</p>
     </div>
-    <p>@todo write documentation</p>
 </body>
+<script src='../build/index.js'></script>
+<script>
+    const elem = document.getElementById('feature');
+    const data = {
+        ...elem.dataset
+    };
+    Localist(data);
+</script>
 
 </html>

@@ -1,5 +1,5 @@
-const axios = require('axios');
-const moment = require('moment');
+import axios from 'axios';
+import moment from 'moment';
 
 /**
  * Sets params and returns axios Promise.

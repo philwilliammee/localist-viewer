@@ -8,6 +8,7 @@ module.exports = {
     filename: 'index.js',
     libraryTarget: 'umd'
   },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -17,13 +18,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: ["babel-preset-env"]
           }
         }
       }
     ]
-  },
-  externals: {
-    'react': 'commonjs react'
   }
 };
