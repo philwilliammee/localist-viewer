@@ -47,13 +47,14 @@
         <p>@todo write documentation</p>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script> -->
+<script src="../build/index.js"></script>
 <script>
     const elem = document.getElementById('feature');
     const data = {
         ...elem.dataset
     };
-    Localist(data);
+    localistViewer(data);
 </script>
 
 </html>

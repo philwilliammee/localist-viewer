@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
 import React, { useState }  from 'react';
 import PropTypes from 'prop-types';
 
@@ -25,13 +24,17 @@ const EventFilters = props => {
             handleEventFilter(events);
         } else {
             const filters = events.filter( event => {
-                if (filterby === 'type' && getTypeIds(event.event).includes(obj.id)){
+                const ids = getTypeIds(event.event);
+                const departmentIds = getDepartmentIds(event.event);
+                const groupId = getGroupId(event.event);
+                if (filterby === 'type' && ids.includes(obj.id)){
                     return event;
-                }else if (filterby === 'dept' && getDepartmentIds(event.event).includes(obj.id)){
+                }if (filterby === 'dept' && departmentIds.includes(obj.id)){
                     return event;
-                } else if (filterby === 'group' && getGroupId(event.event).includes(obj.id)){
+                } if (filterby === 'group' && groupId === (obj.id)){
                     return event;
                 }
+                return null;
             })
             handleEventFilter(filters);
         }
@@ -59,7 +62,7 @@ const EventFilters = props => {
                 {filterKeys.map(key => {
                     const obj = filterObjs[key];
                     const {id, name} = obj;
-                    const filterId = 'filter'+id
+                    const filterId = `filter${id}`
                     return (
                         <li key={id} >
                             <button

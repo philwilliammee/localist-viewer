@@ -39,7 +39,6 @@ class Localist extends Component {
         ];
         this.curPage = 1;
         this.handlePageClick = this.handlePageClick.bind(this)
-
     }
 
     componentDidMount(){
@@ -65,7 +64,7 @@ class Localist extends Component {
         if (loading){
             return (
                 <div className="loader p-4">
-                    <span className="fa fa-spin fa-cog"></span>
+                    <span className="fa fa-spin fa-cog"/>
                 </div>
             )
         }
@@ -174,11 +173,9 @@ class Localist extends Component {
     }
 
     getEvents(page){
-        setTimeout(function() {
-            if (this.curPage !== page){
-                this.setState({loading: true})
-            }
-        }.bind(this), 400)
+        setTimeout(()=>{
+            if (this.curPage !== page){ this.setState({loading: true}) }
+        }, 400)
 
         const {
             depts,
@@ -209,7 +206,7 @@ class Localist extends Component {
                         events: response.data.events,
                         llPage: response.data.page,
                         loading: false,
-                        page: page,
+                        page,
                     });
                     this.curPage = response.data.page.current
                 } else {

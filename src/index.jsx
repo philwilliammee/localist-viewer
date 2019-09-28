@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import LocalistComponent from './localist';
 
+console.warn('linked');
+
 const localistRun = props => {
     const {
         target,
