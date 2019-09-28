@@ -1,6 +1,6 @@
 {
   "name": "localist-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Uses localist api to view events",
   "license": "GPLv2",
   "repository": {
@@ -41,7 +41,10 @@
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.1.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
   }
