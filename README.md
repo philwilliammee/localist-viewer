@@ -1,6 +1,14 @@
 # Localist Viewer
 
-## [Demo Page](https://philwilliammee.github.io/localist-viewer/) [NPM localist-viewer] ([Demo Page](https://philwilliammee.github.io/localist-viewer/))
+## [Demo Page](https://philwilliammee.github.io/localist-viewer/)
+
+## Installation
+
+Install with NPM [package: localist-viewer](https://philwilliammee.github.io/localist-viewer/)
+
+```bash
+npm install localist-viewer
+```
 
 CDN
 
@@ -9,8 +17,6 @@ CDN
 ```
 
 ## Usage
-
-
 
 The exported function takes the following arguments.
 
@@ -36,4 +42,38 @@ The exported function takes the following arguments.
         listclass: 'string css class to add to list',
         itemclass: 'string css class to add to event',
     }
+```
+
+Demo code example
+
+```html
+<div id="feature"
+    class="events-listing cwd-events-style"
+    data-target="feature"
+    data-depts="0"
+    data-entries="3"
+    data-format="modern_compact"
+    data-group="0"
+    data-keyword=""
+    data-heading="Upcoming Events Demo"
+    data-calendarurl="//events.cornell.edu/api/2.1/events"
+    data-apikey=""
+    data-daysahead="2"
+    data-hidedescription="false"
+    data-truncatedescription="200"
+    data-hideimages="false"
+    data-hideaddcal="true"
+    data-hidepagination="false"
+    data-filterby="none"
+    data-wrapperclass="cwd-card-grid three-card"
+    data-listclass="cards"
+    data-itemclass="card"
+    >
+</div>
+<script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script>
+<script>
+    const elem = document.getElementById('feature');
+    const data = { ...elem.dataset };
+    Localist(data);
+</script>
 ```
