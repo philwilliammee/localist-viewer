@@ -1,6 +1,6 @@
 # Localist Viewer
 
-## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs) [Tests](https://philwilliammee.github.io/localist-viewer/coverage)
+## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs) | [Tests](https://philwilliammee.github.io/localist-viewer/coverage/lcov-report/)
 
 ## Installation
 
