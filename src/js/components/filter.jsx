@@ -7,6 +7,8 @@ import {
     getDepartmentIds,
 } from '../helpers/displayEvent';
 
+import { FilterButton } from './partials';
+
 /**
  * @todo ad target id to data filter string.
  * @param {obj} props The props.
@@ -45,19 +47,16 @@ const EventFilters = props => {
             <h3 className="hidden">Show:</h3>
             <ul className="events-filters">
                 <li>
-                    <button
-                        id="filterAll"
-                        data-filter="all"
-                        className={`filter-btn ${active === 'filterAll' ? 'active' : ''}`}
-                        type="button"
-                        onClick={()=>{
+                    <FilterButton
+                        filterId= "filterAll"
+                        active= {active}
+                        name= "All Events"
+                        clickHandler= {()=>{
                             const obj = {id:'filterAll', name:'filterAll'};
                             applyFilter(obj);
                             setActive('filterAll')
                         }}
-                    >
-                All Events
-                    </button>
+                    />
                 </li>
                 {filterKeys.map(key => {
                     const obj = filterObjs[key];
@@ -65,17 +64,15 @@ const EventFilters = props => {
                     const filterId = `filter${id}`
                     return (
                         <li key={id} >
-                            <button
-                                id={filterId}
-                                data-filter='filter'
-                                className={`filter-btn ${active === filterId ? 'active' : ''}`}
-                                type="button"
-                                onClick={()=>{
+                            <FilterButton
+                                filterId= {filterId}
+                                active= {active}
+                                name= {name}
+                                clickHandler= {()=>{
                                     applyFilter(obj);
                                     setActive(filterId);
                                 }}
-                            >{name}
-                            </button>
+                            />
                         </li>
                     )
                 })}

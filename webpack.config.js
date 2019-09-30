@@ -9,7 +9,7 @@ module.exports = {
         filename: 'index.js',
         libraryTarget: 'umd'
     },
-    mode: 'production',
+    mode: 'development',
     module: {
         rules: [
             {

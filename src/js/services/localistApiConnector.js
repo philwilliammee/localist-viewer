@@ -16,11 +16,11 @@ export default (
     page,
 ) => {
     const params = {
-        apikey: apikey,
-        days: days,
+        apikey,
+        days,
         distinct: true,
         pp: entries,
-        page: page,
+        page,
         start:
             format === 'archive'
                 ? moment().format('YYYY-MM-DD')

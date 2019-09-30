@@ -25,16 +25,17 @@ const ModernStandardInner = props => {
 
     /**
      *
-     * @param {obj} event_types An array of events.
+     * @param {obj} eventTypes An array of events.
      * @return {string} Html string
      */
-    const tagStr = event_types => {
-        if (event_types) {
-            const spanStr = event_types.map(element => {
+    const tagStr = eventTypes => {
+        let spanStr;
+        if (eventTypes) {
+            spanStr = eventTypes.map(element => {
                 return <span key={element.id} className="inline-events-type">{element.name}</span>
             });
-            return spanStr;
         }
+        return spanStr;
     };
 
     const eventTime = getEventTime(event);
@@ -71,7 +72,7 @@ const ModernStandardInner = props => {
                                 photoCrop='big'
                             />
                             { hidedescription !== 'true'
-                                ? getTruncDesc(event, truncatedescription) + ' read more'
+                                ? `${getTruncDesc(event, truncatedescription)} read more`
                                 : ''}
                         </p>
                     </div>
@@ -165,9 +166,9 @@ ModernStandard.defaultProps = {
     hideaddcal: 'false',
     truncatedescription: '250',
     hideimages: 'false',
-    wrapperclass: '', //cwd-card-grid three-card',
-    listclass: '', //cards',
-    itemclass: '', //card',
+    wrapperclass: '',
+    listclass: '',
+    itemclass: '',
     hidedescription: 'false',
 
 };

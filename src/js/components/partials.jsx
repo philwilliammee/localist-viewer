@@ -40,9 +40,9 @@ const EventLocation = props => {
     const {locationName} = props;
     if (locationName){
         return <h4 className='meta location'>{locationName}</h4>
-    }else{
-        return '';
     }
+        return '';
+
 }
 EventLocation.propTypes = {
     locationName: PropTypes.string,
@@ -63,7 +63,7 @@ const EventImg = props => {
             height='150'
             src={photo}
             loading='lazy'
-        ></img>
+         />
     );
 
 }
@@ -162,9 +162,9 @@ const EventTypes = props => {
             </h4>
         )
     }
-    else{
+
         return '';
-    }
+
 }
 EventTypes.propTypes = {
     eventTypes: PropTypes.array,
@@ -174,6 +174,28 @@ EventTypes.defaultProps = {
     eventTypes: null,
 }
 
+const FilterButton= props => {
+    const {filterId, active, clickHandler, name} = props
+    return (
+        <button
+            id={filterId}
+            className={`filter-btn ${active === filterId ? 'active' : ''}`}
+            type="button"
+            onClick={clickHandler}
+        >{name}
+        </button>
+    )
+}
+FilterButton.propTypes = {
+    name: PropTypes.string.isRequired,
+    clickHandler: PropTypes.func.isRequired,
+    filterId: PropTypes.string.isRequired,
+    active: PropTypes.string,
+};
+
+FilterButton.defaultProps = {
+    active: '',
+}
 
 export {
     EventTitle,
@@ -183,4 +205,5 @@ export {
     EventDescription,
     EventTypes,
     EventImg,
+    FilterButton,
 };
