@@ -41,7 +41,7 @@ const EventLocation = props => {
     if (locationName){
         return <h4 className='meta location'>{locationName}</h4>
     }
-        return '';
+    return '';
 
 }
 EventLocation.propTypes = {
@@ -63,7 +63,7 @@ const EventImg = props => {
             height='150'
             src={photo}
             loading='lazy'
-         />
+        />
     );
 
 }
@@ -152,19 +152,17 @@ EventDescription.defaultProps = {
 
 const EventTypes = props => {
     const {eventTypes} = props;
-    if (eventTypes) {
-        return (
-            <h4 className="meta type">
-                <span className="fa"></span>
-                {eventTypes.map(event_type => {
-                    return event_type.name
-                }).join(', ')}
-            </h4>
-        )
-    }
-
+    if (!eventTypes) {
         return '';
-
+    }
+    return (
+        <h4 className="meta type">
+            <span className="fa"/>
+            {eventTypes.map(eventType => {
+                return eventType.name
+            }).join(', ')}
+        </h4>
+    )
 }
 EventTypes.propTypes = {
     eventTypes: PropTypes.array,
