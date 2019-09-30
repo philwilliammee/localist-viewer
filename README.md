@@ -4,7 +4,7 @@
 
 ## Installation
 
-Install with NPM [package: localist-viewer](https://philwilliammee.github.io/localist-viewer/)
+Install with NPM: [package/localist-viewer](https://www.npmjs.com/package/localist-viewer)
 
 ```bash
 npm install localist-viewer

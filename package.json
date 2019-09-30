@@ -61,5 +61,11 @@
     "react-test-renderer": "^16.10.1",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
-  }
+  },
+  "keywords": [
+    "localist",
+    "events",
+    "cwd",
+    "cwd_events"
+  ]
 }
