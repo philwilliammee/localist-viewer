@@ -90,10 +90,13 @@ const ModernStandardInner = props => {
 
 ModernStandardInner.propTypes = {
     event: PropTypes.object.isRequired,
-    hideaddcal: PropTypes.string.isRequired,
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
     truncatedescription: PropTypes.string.isRequired,
-    hidedescription: PropTypes.string.isRequired,
-    hideimages: PropTypes.string.isRequired,
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
     itemclass: PropTypes.string.isRequired,
 };
 
@@ -152,10 +155,10 @@ const ModernStandard= props =>{
 ModernStandard.propTypes = {
     events: PropTypes.array,
     filterby: PropTypes.string.isRequired,
-    hideaddcal: PropTypes.string,
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
     truncatedescription: PropTypes.string,
-    hideimages: PropTypes.string,
-    hidedescription: PropTypes.string,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
     wrapperclass: PropTypes.string,
     listclass: PropTypes.string,
     itemclass: PropTypes.string,

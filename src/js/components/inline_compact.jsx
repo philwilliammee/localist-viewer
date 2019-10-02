@@ -12,15 +12,16 @@ const InlineCompactInner = props => {
     const eventTime = getEventTime(event);
     const endTime = getEventEndTime(event);
 
-    const renderEventLocation = locationName =>{
-        if (locationName){
-            return (
-                <div className="event-location">
-                    <span className="fa fa-map-marker"></span>
-                    {event.location_name}
-                </div>
-            )
+    const renderEventLocation = locationName => {
+        if (_.isEmpty(locationName)){
+            return '';
         }
+        return (
+            <div className="event-location">
+                <span className="fa fa-map-marker" />
+                {locationName}
+            </div>
+        )
     }
 
     return (
@@ -35,15 +36,15 @@ const InlineCompactInner = props => {
                     </div>
                     <div className="col-sm-8 event-title-and-location">
                         <div className="event-title">
-                            <a href="${builtEvent.event.localist_url}" hrefLang="en">
+                            <a href= {event.localist_url} hrefLang="en">
                                 {event.title}
                             </a>
                         </div>
                         <div className="event-times">
-                            <span className="fa fa-clock-o"></span>
+                            <span className="fa fa-clock-o" />
                             {eventTime}{endTime ? ` - ${endTime}` : ''}
                         </div>
-                        {renderEventLocation(event)}
+                        {renderEventLocation(event.location_name)}
                     </div>
                 </div>
             </div>

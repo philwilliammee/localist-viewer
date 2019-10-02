@@ -72,12 +72,15 @@ const StandardInner = props => {
 StandardInner.propTypes = {
     event: PropTypes.object.isRequired,
     filterby: PropTypes.string.isRequired,
-    hideaddcal: PropTypes.string.isRequired,
     truncatedescription: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     itemclass: PropTypes.string.isRequired,
-    hidedescription: PropTypes.string.isRequired,
-    hideimages: PropTypes.string.isRequired,
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
 };
 
 const Standard = (props) => {
@@ -111,13 +114,13 @@ const Standard = (props) => {
         return '';
     }
 
-    const getDay = (event, filterby) => {
-        const displayDate = getDisplayDate(event, filterby);
+    const getDay = (event, filterbyType) => {
+        const displayDate = getDisplayDate(event, filterbyType);
         if (lastDay !== displayDate) {
             lastDay = displayDate;
             return (
                 <h4 className="day-header">
-                    <span className="fa fa-calendar-o"></span>
+                    <span className="fa fa-calendar-o"/>
                     {displayDate}
                 </h4>
             )
@@ -167,14 +170,14 @@ const Standard = (props) => {
 Standard.propTypes = {
     events: PropTypes.array,
     filterby: PropTypes.string.isRequired,
-    hideaddcal: PropTypes.string,
     truncatedescription: PropTypes.string,
     thumbnail: PropTypes.string,
     wrapperclass: PropTypes.string,
     listclass: PropTypes.string,
     itemclass: PropTypes.string,
-    hidedescription: PropTypes.string,
-    hideimages: PropTypes.string,
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
 };
 
 Standard.defaultProps = {
@@ -182,9 +185,9 @@ Standard.defaultProps = {
     hideaddcal: 'true',
     truncatedescription: '250',
     thumbnail: 'true',
-    wrapperclass: '', //cwd-card-grid three-card',
-    listclass: '', //cards',
-    itemclass: '', //card',
+    wrapperclass: '',
+    listclass: '',
+    itemclass: '',
     hidedescription: 'false',
     hideimages: 'false',
 };

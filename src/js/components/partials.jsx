@@ -71,7 +71,7 @@ const EventImg = props => {
 EventImg.propTypes = {
     photoUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    hideimages: PropTypes.string,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
     photoCrop:PropTypes.oneOf(['huge', 'big', 'big_square']),
 };
 EventImg.defaultProps = {
@@ -100,7 +100,7 @@ const EventThumbnail = props => {
 EventThumbnail.propTypes = {
     photoUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    hideimages: PropTypes.string,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
     photoCrop:PropTypes.oneOf(['huge', 'big', 'big_square']),
 };
 EventThumbnail.defaultProps = {
@@ -143,7 +143,7 @@ EventDescription.propTypes = {
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    hidedescription: PropTypes.string,
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
 };
 
 EventDescription.defaultProps = {

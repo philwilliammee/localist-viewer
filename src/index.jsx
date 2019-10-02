@@ -23,6 +23,8 @@ const localistRun = props => {
         wrapperclass,
         listclass,
         itemclass,
+        readmore,
+        url,
     } = props;
     if (typeof document === 'undefined' || !document.getElementById(target)) {
         console.warn(`invalid target: ${target}`);
@@ -48,6 +50,8 @@ const localistRun = props => {
         wrapperclass= {wrapperclass}
         listclass= {listclass}
         itemclass= {itemclass}
+        readmore= {readmore}
+        url= {url}
     />, document.getElementById(target));
 }
 // Add localist to the dom.

@@ -256,11 +256,22 @@ class Localist extends Component {
         return renderHeading;
     }
 
+    renderReadMore(){
+        const {readmore, url} = this.props;
+        if (_.isEmpty(readmore) || _.isEmpty(url) ){
+            return '';
+        }
+        return(
+            <a className='cwd_events_readmore' href={url}>{readmore}</a>
+        )
+    }
+
 
     render() {
         return (
             <div>
                 { this.renderHeading() }
+                { this.renderReadMore() }
                 { this.getComponentFromFormat() }
                 { this.renderPagination() }
             </div>
@@ -279,15 +290,17 @@ Localist.propTypes = {
     apikey: PropTypes.string,
     truncatedescription: PropTypes.string.isRequired,
     heading: PropTypes.string,
-    hidedescription: PropTypes.string,
-    hideimages: PropTypes.string,
-    hideaddcal: PropTypes.string,
-    hidepagination: PropTypes.string,
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hidepagination: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
     filterby: PropTypes.string,
     wrapperclass: PropTypes.string,
     listclass: PropTypes.string,
     itemclass: PropTypes.string,
     page: PropTypes.number,
+    readmore: PropTypes.string,
+    url: PropTypes.string,
 };
 
 
@@ -309,6 +322,8 @@ Localist.defaultProps = {
     listclass: '',
     itemclass: '',
     page : 1,
+    readmore: '',
+    url: '',
 };
 
 export default Localist;

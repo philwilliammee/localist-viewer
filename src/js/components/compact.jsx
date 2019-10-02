@@ -59,12 +59,15 @@ const CompactInner = props => {
 
 CompactInner.propTypes = {
     event: PropTypes.object.isRequired,
-    hideaddcal: PropTypes.string.isRequired,
     truncatedescription: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     itemclass: PropTypes.string.isRequired,
-    hidedescription: PropTypes.string.isRequired,
-    hideimages: PropTypes.string.isRequired,
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+        .isRequired,
 };
 
 const Compact = (props) => {
@@ -124,14 +127,14 @@ const Compact = (props) => {
 Compact.propTypes = {
     events: PropTypes.array,
     filterby: PropTypes.string.isRequired,
-    hideaddcal: PropTypes.string,
     truncatedescription: PropTypes.string,
     thumbnail: PropTypes.string,
     wrapperclass: PropTypes.string,
     listclass: PropTypes.string,
     itemclass: PropTypes.string,
-    hidedescription: PropTypes.string,
-    hideimages: PropTypes.string
+    hideaddcal: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hidedescription: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+    hideimages: PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
 };
 
 Compact.defaultProps = {
