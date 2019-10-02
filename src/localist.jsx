@@ -258,7 +258,7 @@ class Localist extends Component {
 
     renderReadMore(){
         const {readmore, url} = this.props;
-        if (_.isEmpty(readmore) || _.isEmpty(url) ){
+        if (!readmore || !url){
             return '';
         }
         return(

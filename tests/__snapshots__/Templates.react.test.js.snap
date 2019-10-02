@@ -190,7 +190,7 @@ exports[`InlineCompact Enabled 1`] = `
                   className="event-title"
                 >
                   <a
-                    href="\${builtEvent.event.localist_url}"
+                    href="http://events.cornell.edu/event/artists_scientists_pollinator_health"
                     hrefLang="en"
                   >
                     PolliNation: Artists & Scientists Crossing Borders to Explore the Value of Pollinator Health
@@ -249,7 +249,7 @@ exports[`InlineCompact Enabled 1`] = `
                   className="event-title"
                 >
                   <a
-                    href="\${builtEvent.event.localist_url}"
+                    href="http://events.cornell.edu/event/work_party_at_dilmun_hill_student_farm"
                     hrefLang="en"
                   >
                     Work Party at Dilmun Hill Student Farm
@@ -308,7 +308,7 @@ exports[`InlineCompact Enabled 1`] = `
                   className="event-title"
                 >
                   <a
-                    href="\${builtEvent.event.localist_url}"
+                    href="http://events.cornell.edu/event/saturday_garden_tours_6546"
                     hrefLang="en"
                   >
                     Saturday Garden Tours
@@ -367,7 +367,7 @@ exports[`InlineCompact Enabled 1`] = `
                   className="event-title"
                 >
                   <a
-                    href="\${builtEvent.event.localist_url}"
+                    href="http://events.cornell.edu/event/honeyland"
                     hrefLang="en"
                   >
                     Honeyland

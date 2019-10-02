@@ -13,7 +13,7 @@ const InlineCompactInner = props => {
     const endTime = getEventEndTime(event);
 
     const renderEventLocation = locationName => {
-        if (_.isEmpty(locationName)){
+        if (!locationName){
             return '';
         }
         return (
