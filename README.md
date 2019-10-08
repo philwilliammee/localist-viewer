@@ -1,8 +1,8 @@
 # Localist Viewer
 
-## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs) | [Tests](https://philwilliammee.github.io/localist-viewer/coverage/lcov-report/)
+## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs) | [Test Site](https://philwilliammee.github.io/localist-viewer/coverage/lcov-report/)
 
-## Installation
+## Installation Process
 
 Install with NPM: [package/localist-viewer](https://www.npmjs.com/package/localist-viewer)
 
@@ -10,7 +10,7 @@ Install with NPM: [package/localist-viewer](https://www.npmjs.com/package/locali
 npm install localist-viewer
 ```
 
-CDN
+CDN:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script>
@@ -18,7 +18,7 @@ CDN
 
 ## Usage
 
-The exported function takes the following arguments.
+The exported functions do take the following arguments.
 
 ```js
     {
@@ -44,7 +44,7 @@ The exported function takes the following arguments.
     }
 ```
 
-Demo code example
+Demo Code Example
 
 ```html
 <div id="feature"
