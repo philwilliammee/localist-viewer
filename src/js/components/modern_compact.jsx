@@ -146,9 +146,9 @@ ModernCompact.defaultProps = {
     hideaddcal: 'false',
     truncatedescription: '150',
     hideimages: 'true',
-    wrapperclass: '', //cwd-card-grid three-card',
-    listclass: '', //cards',
-    itemclass: '', //card',
+    wrapperclass: '',
+    listclass: '',
+    itemclass: '',
     hidedescription: '',
 
 };

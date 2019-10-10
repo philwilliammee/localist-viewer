@@ -15,12 +15,11 @@ import { FilterButton } from './partials';
  */
 const EventFilters = props => {
     const {filterObjs, handleEventFilter, filterby, events} = props;
+    const filterKeys = Object.keys(filterObjs);
+    const [active, setActive] = useState('filterAll');
     if (filterby === 'none'){
         return '';
     }
-    const filterKeys = Object.keys(filterObjs);
-    const [active, setActive] = useState('filterAll');
-
     const applyFilter = obj => {
         if (obj.name === 'filterAll'){
             handleEventFilter(events);
@@ -46,7 +45,7 @@ const EventFilters = props => {
         <div className="events-filters-wrap">
             <h3 className="hidden">Show:</h3>
             <ul className="events-filters">
-                <li>
+                <li key='filterAll' >
                     <FilterButton
                         filterId= "filterAll"
                         active= {active}

@@ -286,7 +286,14 @@ Localist.propTypes = {
     depts: PropTypes.string,
     group: PropTypes.string,
     keyword: PropTypes.string,
-    format: PropTypes.string,
+    format: PropTypes.oneOf([
+        'standard',
+        'compact',
+        'modern_compact',
+        'modern_standard',
+        'inline_compact',
+        'classic'
+    ]),
     apikey: PropTypes.string,
     truncatedescription: PropTypes.string.isRequired,
     heading: PropTypes.string,
