@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import {LocalistComponent} from 'react-localist-viewer';
 
-console.log("it worked");
 const localistRun = props => {
     const {
         target,
