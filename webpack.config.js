@@ -10,7 +10,7 @@ module.exports = {
         libraryTarget: 'umd'
         // libraryTarget: 'commonjs2'
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
             {

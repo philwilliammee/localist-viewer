@@ -1,7 +1,7 @@
 {
   "name": "localist-viewer",
   "version": "0.0.6",
-  "description": "Uses localist api to view events",
+  "description": "es5 module - Uses localist api to view events",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-localist-viewer": "^0.1.0"
   },
   "dependencies": {
     "react": "^16.10.2",
@@ -55,10 +56,12 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
-    "prop-types": "^15.7.2",
     "react-test-renderer": "^16.10.2",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "react-localist-viewer": "^0.1.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "keywords": [
     "localist",
