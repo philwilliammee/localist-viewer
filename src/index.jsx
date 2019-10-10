@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import LocalistComponent from './localist';
+import {LocalistComponent} from 'react-localist-viewer';
 
+console.log("it worked");
 const localistRun = props => {
     const {
         target,
@@ -58,5 +59,4 @@ const localistRun = props => {
 if (typeof window !== 'undefined'){
     window.localistViewer = localistRun;
 }
-export {LocalistComponent};
 export default localistRun;
