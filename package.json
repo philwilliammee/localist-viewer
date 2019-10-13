@@ -1,6 +1,6 @@
 {
   "name": "localist-viewer",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "es5 module - Uses localist api to view events",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-localist-viewer": "^0.1.0"
+    "react-localist-viewer": "^0.1.5"
   },
   "scripts": {
     "test": "jest",

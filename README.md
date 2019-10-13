@@ -66,7 +66,7 @@ Demo Code Example
     data-group="0"
     data-keyword=""
     data-heading="Upcoming Events Demo"
-    data-calendarurl="//events.cornell.edu/api/2.1/events"
+    data-calendarurl="./3eventTestData.json"
     data-apikey=""
     data-daysahead="2"
     data-hidedescription="false"
