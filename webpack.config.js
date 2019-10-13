@@ -1,6 +1,8 @@
 
 // Mostly from https://medium.com/@BrodaNoel/how-to-create-a-react-component-and-publish-it-in-npm-668ad7d363ce
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.jsx',
@@ -29,4 +31,8 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
+    plugins: [
+        new BundleAnalyzerPlugin(),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    ],
 };

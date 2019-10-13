@@ -8,12 +8,6 @@
     "url": "https://github.com/philwilliammee/localist-viewer"
   },
   "main": "build/index.js",
-  "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-localist-viewer": "^0.1.0"
-  },
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -58,10 +52,8 @@
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.10.2",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "react-localist-viewer": "^0.1.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "webpack-bundle-analyzer": "^3.5.2",
+    "webpack-cli": "^3.3.9"
   },
   "keywords": [
     "localist",
