@@ -34,7 +34,25 @@ CDN:
 <script src="https://cdn.jsdelivr.net/npm/localist-viewer@latest/build/index.js"></script>
 ```
 
-## Example Usage
+## Local Testing
+
+from project root start
+
+```bash
+http-server
+```
+
+then open browser at [http://localhost:8080/docs/](http://localhost:8080/docs/)
+
+You show see a demo page with test data.
+
+![demo image](./docs/demo.PNG)
+
+## Deployment
+
+`npm run watch` or `npm run build`
+
+### Example Usage
 
 Demo Code Example
 
@@ -81,23 +99,6 @@ LocalistView(data);
 
 See [react-localist-viewer](https://www.npmjs.com/package/react-localist-viewer) proptypes for all configuartion options.
 
-## Local Testing
-
-from project root start
-
-```bash
-http-server
-```
-
-then open browser at [http://localhost:8080/docs/](http://localhost:8080/docs/)
-
-You show see a demo page with test data.
-
-![demo image](./docs/demo.PNG)
-
-## Deployment
-
-`npm run watch` or `npm run build`
 
 ## Versioning
 
