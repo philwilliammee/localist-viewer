@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import {LocalistComponent} from 'react-localist-viewer';
+import {LocalistComponent} from './dist';
 
 const localistRun = props => {
     const {
