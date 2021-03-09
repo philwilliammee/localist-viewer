@@ -16,17 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jsx|js)$/,
-        include: path.resolve(__dirname, "src"),
-        exclude: /(node_modules|bower_components|build)/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-react"],
-            },
-          },
-        ],
+        test: /\.(jsx|js|ts|tsx)$/,
+        include: __dirname,
+        exclude: /(bower_components|build)/,
+        use: "ts-loader",
       },
       {
         test: /\.s[ac]ss$/i,
@@ -46,7 +39,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
   },
   plugins: [
     new BundleAnalyzerPlugin(),
