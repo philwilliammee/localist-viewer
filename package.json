@@ -16,6 +16,7 @@
     "@testing-library/cypress": "^7.0.4",
     "@types/react-big-calendar": "^0.30.0",
     "@types/react-paginate": "^6.2.1",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -28,6 +29,7 @@
     "eslint-plugin-import": "^2.22.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-query": "^3.12.1",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2"

@@ -18,8 +18,9 @@ module.exports = {
       {
         test: /\.(jsx|js|ts|tsx)$/,
         include: __dirname,
-        exclude: /(bower_components|build)/,
-        use: "ts-loader",
+        // this may have to be removed
+        // exclude: /(bower_components|node_modules|build)/,
+        use: "awesome-typescript-loader",
       },
       {
         test: /\.s[ac]ss$/i,
