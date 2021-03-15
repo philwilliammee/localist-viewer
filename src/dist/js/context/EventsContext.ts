@@ -1,4 +1,4 @@
-import { EventEvent } from "lib/types/types";
+import { EventEvent } from "../../types/types";
 import moment from "moment";
 import React from "react";
 import { EventElement } from "../../types/types";
