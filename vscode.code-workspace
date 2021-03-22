@@ -1,15 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
+  "folders": [{
+    "path": "."
+  }],
+  "settings": {
     "breadcrumbs.enabled": true,
     "css.validate": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.tabSize": 2,
-    "editor.autoIndent": true,
+    "editor.autoIndent": "none",
     "editor.insertSpaces": true,
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
@@ -27,6 +25,7 @@
     "telemetry.enableTelemetry": false,
 
     "eslint.options": {
-        "ignorePath": ".eslintignore"
+      "ignorePath": ".eslintignore"
     },
+  }
 }
