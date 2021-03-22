@@ -1,6 +1,6 @@
 {
   "name": "localist-viewer",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "es5 module - Uses localist api to view events",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -11,9 +11,6 @@
   "dependencies": {
     "@babel/cli": "^7.13.0",
     "@babel/preset-typescript": "^7.13.0",
-    "@cypress/code-coverage": "^3.9.2",
-    "@cypress/instrument-cra": "^1.4.0",
-    "@testing-library/cypress": "^7.0.4",
     "@types/react-big-calendar": "^0.30.0",
     "@types/react-paginate": "^6.2.1",
     "awesome-typescript-loader": "^5.2.1",
@@ -22,10 +19,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^10.0.0",
     "cross-env": "^7.0.3",
-    "cypress": "^6.6.0",
-    "cypress-dark": "^1.7.14",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-import": "^2.22.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -35,8 +29,6 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage",
     "start": "webpack --watch",
     "build": "webpack"
   },
@@ -50,7 +42,6 @@
     "@babel/preset-env": "^7.13.9",
     "@babel/preset-react": "^7.12.13",
     "@reach/dialog": "^0.13.2",
-    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
@@ -64,10 +55,8 @@
     "react-spring": "^8.0.27",
     "truncate": "^2.1.0",
     "truncate-url": "^1.0.0",
-    "ts-loader": "^8.0.17",
     "typescript": "^4.2.3",
     "webpack": "^5.24.4",
-    "webpack-bundle-analyzer": "^3.9.0",
     "webpack-cli": "^4.5.0"
   },
   "keywords": [

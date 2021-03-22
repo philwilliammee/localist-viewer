@@ -26,10 +26,6 @@
     "noImplicitReturns": true,
     "downlevelIteration": true,
     "jsx": "react-jsx",
-    "types": [
-      "cypress",
-      "@testing-library/cypress"
-    ],
     "baseUrl": "./src"
   },
   "include": [
