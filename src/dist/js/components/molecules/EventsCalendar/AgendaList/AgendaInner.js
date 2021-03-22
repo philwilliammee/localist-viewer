@@ -11,13 +11,7 @@ var _EventsContext = _interopRequireDefault(require("../../../../context/EventsC
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _displayEvent = require("../../../../helpers/displayEvent");
-
-var _partials = require("../../partials");
-
-var _Truncate = _interopRequireDefault(require("../../../atoms/Truncate"));
-
-var _Time = _interopRequireDefault(require("../../../atoms/Time"));
+var _AgendaInnerContent = _interopRequireDefault(require("./AgendaInnerContent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,13 +19,11 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 const AgendaListView = props => {
   const {
-    calendarEvent,
-    hideimages,
-    hidetime,
-    setShowDialog,
-    setEventSelected
+    calendarEvent
   } = props;
   const {
     events
@@ -41,62 +33,10 @@ const AgendaListView = props => {
   if (!event || event.id === -1) {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
   }
-  /**
-   *
-   * @param {obj} eventTypes
-   * @return {string} Html string
-   */
 
-
-  const tagStr = eventTypes => {
-    let spanStr;
-
-    if (eventTypes) {
-      spanStr = eventTypes.map(element => {
-        return /*#__PURE__*/_react.default.createElement("span", {
-          key: element.id,
-          className: "inline-events-type"
-        }, element.name);
-      });
-    }
-
-    return spanStr;
-  };
-
-  const handleOnClick = () => {
-    setEventSelected(event);
-    setShowDialog(true);
-  };
-
-  const eventTime = (0, _displayEvent.getEventTime)(event);
-  const classList = (0, _displayEvent.getClassItem)(event);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: classList
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "events"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: `#${event.id}`,
-    className: "group-link-wrapper field-group-link",
-    onClick: handleOnClick
-  }, hidetime ? "" : /*#__PURE__*/_react.default.createElement(_Time.default, {
+  return /*#__PURE__*/_react.default.createElement(_AgendaInnerContent.default, _extends({}, props, {
     event: event
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "field title"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, event.title)), /*#__PURE__*/_react.default.createElement("div", {
-    className: "field meta"
-  }, /*#__PURE__*/_react.default.createElement("p", null, hidetime ? "" : eventTime, event.location_name ? `, ${event.location_name}` : "", tagStr(event.filters.event_types))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "field field-name-summary summary"
-  }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_partials.EventImg, {
-    photoUrl: event.photo_url,
-    title: event.title,
-    hideimages: hideimages,
-    photoCrop: "big"
-  }), /*#__PURE__*/_react.default.createElement(_Truncate.default, {
-    event: event,
-    hidedescription: "false",
-    truncatedescription: "300",
-    readMore: "read more"
-  }))))));
+  }));
 };
 
 AgendaListView.propTypes = {
