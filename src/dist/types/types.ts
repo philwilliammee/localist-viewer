@@ -1,7 +1,7 @@
 import moment from "moment";
 
 export interface AppProps {
-  target?: string
+  target?: string;
   calendarurl: string;
   entries?: string;
   daysahead?: string;
