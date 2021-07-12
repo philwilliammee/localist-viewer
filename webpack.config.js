@@ -20,7 +20,8 @@ module.exports = {
         include: __dirname,
         // this may have to be removed
         // exclude: /(bower_components|node_modules|build)/,
-        use: "awesome-typescript-loader",
+        // use: "awesome-typescript-loader",
+        use: "ts-loader",
       },
       {
         test: /\.s[ac]ss$/i,

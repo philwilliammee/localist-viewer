@@ -5,15 +5,13 @@ import {
   getEventDateCompact,
   getClassItem,
 } from "../../helpers/displayEvent";
-import AddCal from "./AddCal";
-import {
-  EventTitle,
-  EventDate,
-  EventLocation,
-  EventThumbnail,
-  EventDescription,
-} from "./Partials";
+import AddCal from "./AddCal/AddCal";
+import EventDescription from "../atoms/EventDescription/EventDescription";
+import EventTitle from "../atoms/EventTitle";
 import { InnerProps, StandardProps } from "../../../types/types";
+import EventDate from "../atoms/EventDate";
+import EventLocation from "../atoms/EventLocation";
+import EventThumbnail from "../atoms/EventThumbnail";
 
 const CompactInner = (props: InnerProps) => {
   const {
@@ -74,7 +72,7 @@ const Compact = (props: StandardProps) => {
               events.map((event) => {
                 return (
                   <CompactInner
-                    key={event.event.id}
+                    key={event.event.event_instances[0].event_instance.id}
                     event={event.event}
                     // filterby={filterby}
                     {...props}
