@@ -4,8 +4,8 @@ import { DialogOverlay, DialogContent } from "@reach/dialog";
 import PropTypes from "prop-types";
 import "@reach/dialog/styles.css";
 import "./ModalDialog.scss";
-import CloseIcon from "@material-ui/icons/Close";
-import { IconButton } from "@material-ui/core";
+import CloseIcon from "@mui/icons-material/Close";
+import { IconButton } from "@mui/material";
 
 let AnimatedDialogOverlay = animated(DialogOverlay);
 let AnimatedDialogContent = animated(DialogContent);
@@ -51,26 +51,11 @@ function ModalDialog(props: Props) {
                     minHeight: 300,
                   }}
                 >
-                  {/* <button
-                    className="close"
-                    style={{ float: "right", padding: "2px 5px" }}
-                    onClick={() => props.setShowDialog(false)}
-                    aria-label="close dialog"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                    >
-                      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
-                    </svg>
-                  </button> */}
                   <IconButton
                     style={{ float: "right" }}
                     onClick={() => props.setShowDialog(false)}
                     aria-label="close dialog"
-                  >
+                    size="large">
                     <CloseIcon />
                   </IconButton>
                   {props.children}

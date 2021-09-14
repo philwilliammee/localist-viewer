@@ -1,6 +1,6 @@
 import { EventEvent, Format, Department } from "./../../types/types";
 import moment from "moment";
-import truncate from "truncate";
+import truncate from "text-clipper";
 
 /**
  * @file A collection of functions for working with event objects.
@@ -116,11 +116,25 @@ export const getCalEndDate = (event: EventEvent) => {
  */
 export const getDisplayDate = (event: EventEvent, format: Format) => {
   const dateTime = getEventStart(event);
-  const eventDate =
-    format === "compact"
-      ? moment(dateTime).format("MMM D")
-      : moment(dateTime).format("M/DD/YYYY");
+  let eventDate = moment(dateTime).format("M/DD/YYYY");
+  switch (format) {
+    case "compact":
+      eventDate = moment(dateTime).format("MMM D");
+      break;
+    default:
+      break;
+  }
   return eventDate;
+};
+
+/**
+ * @param {EventEvent} event The localist event.
+ * @param {Format} format
+ *
+ * @return {string} The date string in format "MMMM D, YYYY".
+ */
+export const getFullDate = (event: EventEvent) => {
+  return moment(getEventStart(event)).format("MMMM D, YYYY");
 };
 
 /**
@@ -145,7 +159,8 @@ export const getEventDate = (event: EventEvent) => {
  */
 export const getTruncDesc = (
   event: EventEvent,
-  excerptLength?: number | string
+  excerptLength?: number | string,
+  readMore?: string
 ) => {
   if (!event) {
     return "";
@@ -156,7 +171,12 @@ export const getTruncDesc = (
       typeof excerptLength == "string"
         ? parseInt(excerptLength, 10)
         : excerptLength;
-    description = truncate(event.description_text, maxLength);
+    const ellipsis = readMore ? "... " + readMore : "...";
+    description = truncate(event.description_text, maxLength, {
+      html: true,
+      maxLines: 5,
+      indicator: ellipsis,
+    });
   }
   return description;
 };

@@ -234,6 +234,9 @@
 .calendar-container td {
   vertical-align: top;
 }
+.calendar-container > .flex-grid {
+  margin: 0px;
+}
 
 .rlv-standard .events-listing {
   position: relative;
@@ -471,6 +474,16 @@
   width: 100%;
 }
 
+.rlv-loading {
+  text-align: center;
+  margin: auto;
+  padding: 4em;
+}
+
+.rlv-event-description {
+  word-break: break-word;
+}
+
 .rlc-add-cal {
   float: right;
   font-size: 13px;
@@ -505,16 +518,6 @@
   box-shadow: none;
 }
 
-.rlv-event-description {
-  word-break: break-word;
-}
-
-.rlv-loading {
-  text-align: center;
-  margin: auto;
-  padding: 4em;
-}
-
 .rlv-event-title {
   margin-top: 0;
   font-weight: normal;
@@ -539,9 +542,7 @@
   text-transform: none;
   font-weight: normal;
   font-size: 1em;
-  color: #666;
   margin-bottom: 12px;
-  float: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -558,6 +559,29 @@
   100% {
     opacity: 1;
   }
+}
+
+.rlv-filter-button {
+  float: left;
+  padding: 5px 13px 5px;
+  background: #e7eff3;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  border-style: none;
+}
+.rlv-filter-button.active {
+  color: #fff !important;
+  background: #4B7995 !important;
+}
+.rlv-filter-button :hover {
+  background: #d3e1e8;
+  color: #000;
+}
+.rlv-filter-button :focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .rlv-month-view {
@@ -598,20 +622,11 @@
   height: 25px;
 }
 .rlv-month-view .content .event {
-  border: none;
-  box-sizing: border-box;
-  box-shadow: none;
   margin: 0;
   padding: 2px 5px;
-  background-color: #3174ad;
-  color: #fff;
-  cursor: pointer;
   width: 100%;
   text-align: left;
   height: 24px;
-}
-.rlv-month-view .content .event:hover {
-  background: #017bb1;
 }
 .rlv-month-view .content .button-text {
   overflow: hidden;
@@ -623,13 +638,17 @@
   min-width: 20px;
   font-size: 1rem;
 }
-.rlv-month-view .content button.day-btn {
+.rlv-month-view .content .day-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.rlv-month-view .content .day-wrapper button.day-btn {
   border-radius: 50%;
   border: none;
   padding-bottom: 4px;
   padding-top: 4px;
 }
-.rlv-month-view .content button.day-btn:hover {
+.rlv-month-view .content .day-wrapper button.day-btn:hover {
   background-color: #fcf3e1;
 }
 
@@ -655,12 +674,11 @@
   align-items: center;
 }
 .rlv-tool-bar button.active {
-  background-image: none;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  text-decoration: none;
+  background-color: #1f4763;
+  box-shadow: 0px 2px 4px -1px;
 }
 .rlv-tool-bar button {
-  background: none;
   white-space: nowrap;
 }
 .rlv-tool-bar button:first-child:not(:last-child) {
@@ -673,29 +691,6 @@
 }
 .rlv-tool-bar button:not(:first-child):not(:last-child) {
   border-radius: 0;
-}
-
-.rlv-filter-button {
-  float: left;
-  padding: 5px 13px 5px;
-  background: #e7eff3;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  text-decoration: none !important;
-  border-style: none;
-}
-.rlv-filter-button.active {
-  color: #fff !important;
-  background: #4B7995 !important;
-}
-.rlv-filter-button :hover {
-  background: #d3e1e8;
-  color: #000;
-}
-.rlv-filter-button :focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .rlv-truncate {
@@ -742,36 +737,35 @@ div[data-reach-dialog-overlay] > div {
   padding: 9px 12px;
 }
 
-#calendarFilters .padded {
-  padding: 10px 0px 10px 10px;
+#rlv-filters .padded {
+  padding: 10px;
 }
-#calendarFilters .heading {
+#rlv-filters .heading {
   background-color: inherit;
 }
-#calendarFilters .heading h4,
-#calendarFilters .heading p {
+#rlv-filters .heading h4,
+#rlv-filters .heading p {
   margin-bottom: 5px;
 }
-#calendarFilters .filter-groups {
-  background-color: #eee;
-  border: 1px solid #eee;
+#rlv-filters .filter-groups label {
+  margin-right: 4px;
 }
-#calendarFilters ul {
+#rlv-filters ul {
   list-style: none;
   padding-left: 10px;
 }
-#calendarFilters .filter-group {
+#rlv-filters .filter-group {
   max-height: 275px;
   overflow-y: auto;
 }
-#calendarFilters button {
+#rlv-filters button {
   margin-top: 10px;
   width: 100%;
   height: 42px;
 }
 
 @media only screen and (max-width: 833px) {
-  #calendarFilters {
+  #rlv-filters {
     display: none;
   }
 }
@@ -870,22 +864,6 @@ div[data-reach-dialog-overlay] > div {
     width: 100vw;
     padding-bottom: 10px;
   }
-}
-
-.rlv-more-info {
-  padding: var(--spacing-2);
-  background-color: var(--lightest-black-alpha);
-  margin: var(--spacing-4) var(--spacing-0);
-}
-.rlv-more-info h4,
-.rlv-more-info .flex-12 {
-  margin-bottom: var(--spacing-2);
-}
-.rlv-more-info h5 {
-  margin-bottom: var(--spacing-0);
-}
-.rlv-more-info p {
-  margin-bottom: var(--spacing-1);
 }
 
 .rlv-tag {

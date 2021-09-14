@@ -1,6 +1,6 @@
-#calendarFilters {
+#rlv-filters {
     .padded {
-        padding: 10px 0px 10px 10px;
+        padding: 10px;
     }
 
     .heading {
@@ -14,8 +14,11 @@
     }
 
     .filter-groups {
-        background-color: #eee;
-        border: 1px solid #eee;
+
+        label {
+            margin-right: 4px;
+        }
+
     }
 
     ul {
@@ -36,7 +39,7 @@
 }
 
 @media only screen and (max-width: 833px) {
-    #calendarFilters {
+    #rlv-filters {
         display: none;
     }
 }

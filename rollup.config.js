@@ -7,6 +7,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
 import css from "rollup-plugin-css-only";
 import scss from "rollup-plugin-scss";
+import json from "@rollup/plugin-json";
 
 export default {
   input: "src/index.tsx",
@@ -15,10 +16,7 @@ export default {
       file: "build/index.js",
       name: "app",
       sourcemap: "inline",
-      format: "umd",
-      globals: {
-        "node:url" : "url",//truncate-url issue
-      },
+      format: "umd"
     },
   ],
   plugins: [
@@ -32,6 +30,7 @@ export default {
       "process.env.NODE_ENV": JSON.stringify("production"),
     }),
     commonjs(),
+    json(),
     typescript({
       tsconfig: "tsconfig.json",
       sourceMap: true,
@@ -42,6 +41,6 @@ export default {
       output: "build/css/style.css",
       failOnError: true,
       runtime: require("sass"),
-    }),
+    })
   ],
 };
