@@ -45,6 +45,9 @@ const GET_EVENTS = `
           title
           entityId
           nid
+          entityUrl{
+            path
+          }
           fieldEventDate {
             value
           }
@@ -126,8 +129,13 @@ const drupalApiConnector = (props: ApiConnectorProps) => {
   return axios.post(calendarurl, { query, variables });
 };
 
-const drupalEventsTransformer = (drupalEvents: NodeEvent[]): EventElement[] => {
+const drupalEventsTransformer = (
+  drupalEvents: NodeEvent[],
+  calendarurl: string
+): EventElement[] => {
+  const baseUrl = calendarurl.replace("/graphql", "");
   const drupalTransformedEvents: EventElement[] = drupalEvents?.map((event) => {
+    console.log(event);
     const drupalTransformedEvent: EventElement = {
       event: {
         id: parseInt(event.entityId!, 10),
@@ -209,7 +217,7 @@ const drupalEventsTransformer = (drupalEvents: NodeEvent[]): EventElement[] => {
             }) || [],
         },
         custom_fields: {},
-        localist_url: event.entityUrl?.path || "",
+        localist_url: baseUrl + event.entityUrl?.path,
         localist_ics_url: "",
         photo_url: event.fieldEventImage?.url || "",
         venue_url: null,
