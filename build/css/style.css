@@ -226,18 +226,6 @@
   margin-right: 5px;
 }
 
-.calendar-container table td,
-.calendar-container table th {
-  border-width: 1px;
-  font-size: 1rem;
-}
-.calendar-container td {
-  vertical-align: top;
-}
-.calendar-container > .flex-grid {
-  margin: 0px;
-}
-
 .rlv-standard .events-listing {
   position: relative;
   float: left;
@@ -332,6 +320,18 @@
   white-space: nowrap;
 }
 
+.calendar-container table td,
+.calendar-container table th {
+  border-width: 1px;
+  font-size: 1rem;
+}
+.calendar-container td {
+  vertical-align: top;
+}
+.calendar-container > .flex-grid {
+  margin: 0px;
+}
+
 .rlv-modern-standard .events .field {
   clear: both;
 }
@@ -381,6 +381,44 @@
   object-position: 100% 0;
   width: 200px;
   height: 150px;
+}
+
+.rlc-add-cal {
+  float: right;
+  font-size: 13px;
+  padding-bottom: var(--spacing-4);
+  /* Add To Calendar
+  -----------------*/
+}
+.rlc-add-cal > a {
+  width: auto;
+  font-size: var(--spacing-4);
+  padding-right: var(--spacing-2);
+  color: var(--light-black);
+  text-decoration: none;
+  display: inline-block;
+}
+.rlc-add-cal a:first-child {
+  padding-left: var(--spacing-2);
+}
+.rlc-add-cal .google {
+  color: #2d863e;
+  background: transparent;
+  box-shadow: none;
+}
+.rlc-add-cal .microsoft {
+  color: var(--waLightBlue);
+  background: transparent;
+  box-shadow: none;
+}
+.rlc-add-cal .apple {
+  color: #545a5f;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rlv-event-description {
+  word-break: break-word;
 }
 
 .rlv-modern-compact {
@@ -478,44 +516,6 @@
   text-align: center;
   margin: auto;
   padding: 4em;
-}
-
-.rlc-add-cal {
-  float: right;
-  font-size: 13px;
-  padding-bottom: var(--spacing-4);
-  /* Add To Calendar
-  -----------------*/
-}
-.rlc-add-cal > a {
-  width: auto;
-  font-size: var(--spacing-4);
-  padding-right: var(--spacing-2);
-  color: var(--light-black);
-  text-decoration: none;
-  display: inline-block;
-}
-.rlc-add-cal a:first-child {
-  padding-left: var(--spacing-2);
-}
-.rlc-add-cal .google {
-  color: #2d863e;
-  background: transparent;
-  box-shadow: none;
-}
-.rlc-add-cal .microsoft {
-  color: var(--waLightBlue);
-  background: transparent;
-  box-shadow: none;
-}
-.rlc-add-cal .apple {
-  color: #545a5f;
-  background: transparent;
-  box-shadow: none;
-}
-
-.rlv-event-description {
-  word-break: break-word;
 }
 
 .rlv-event-location {
@@ -866,6 +866,11 @@ div[data-reach-dialog-overlay] > div {
   }
 }
 
+.rlv-event-date-time .access-time-icon {
+  font-size: inherit;
+  margin-right: var(--spacing-1);
+}
+
 .rlv-tag {
   padding: 2px 8px 1px;
   background: var(--off-white);
@@ -873,9 +878,4 @@ div[data-reach-dialog-overlay] > div {
   text-decoration: none !important;
   color: var(--black);
   margin-left: var(--spacing-2);
-}
-
-.rlv-event-date-time .access-time-icon {
-  font-size: inherit;
-  margin-right: var(--spacing-1);
 }
