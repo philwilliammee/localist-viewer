@@ -238,97 +238,6 @@
   margin: 0px;
 }
 
-.rlv-modern-compact {
-  /*! end @import */
-  /*! @import https://cu-communityapps.github.io/CD_cwd_events/src/app/dist/cwd_events.css */
-}
-.rlv-modern-compact .card {
-  border: none;
-}
-.rlv-modern-compact .events .field {
-  clear: both;
-}
-.rlv-modern-compact .events time {
-  width: auto;
-  min-height: 0;
-  margin: 0 0 1em;
-}
-.rlv-modern-compact .events time .month {
-  float: left;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 400;
-  padding: 9px 12px;
-  text-transform: uppercase;
-}
-.rlv-modern-compact .events time .day {
-  float: left;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 400;
-  padding: 9px 12px;
-}
-.rlv-modern-compact .events h3 {
-  width: 100%;
-  font-size: 21px;
-  line-height: 1.4;
-  margin-bottom: 0.25em;
-  font-family: Iowan Old Style, Georgia, Athelas, Baskerville, Sitka Display, Constansia, serif;
-}
-.rlv-modern-compact .events .meta {
-  color: #767676;
-  font-size: 13px;
-  font-weight: 400;
-}
-.rlv-modern-compact .events-listing > div.events-list > div > div > a {
-  margin: 0px 0 25px 0 !important;
-}
-.rlv-modern-compact .events a.group-link-wrapper {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  color: #000;
-  transition: background 0.15s, box-shadow 0.15s;
-}
-.rlv-modern-compact .events a:hover h3,
-.rlv-modern-compact .events a:focus h3 {
-  text-decoration: underline;
-  color: #127cb5;
-}
-.rlv-modern-compact .events a:active h3 {
-  color: #000;
-}
-.rlv-modern-compact .events a:hover,
-.rlv-modern-compact .events a:focus {
-  background: rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.05);
-}
-.rlv-modern-compact .events a:active {
-  background: rgba(0, 0, 0, 0.09);
-  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.09);
-}
-.rlv-modern-compact img {
-  float: left;
-  margin: 0 20px 0px 0px;
-  object-fit: cover;
-  object-position: 100% 0;
-  width: 200px;
-  height: 150px;
-}
-.rlv-modern-compact .group-image {
-  width: 100%;
-}
-.rlv-modern-compact .group-image img {
-  vertical-align: middle;
-  width: 100%;
-  height: auto;
-  border-bottom: 8px solid #b31b1b;
-  margin-bottom: 1em;
-}
-.rlv-modern-compact .cwd-card-grid .group-image {
-  width: 100%;
-}
-
 .rlv-standard .events-listing {
   position: relative;
   float: left;
@@ -474,6 +383,97 @@
   height: 150px;
 }
 
+.rlv-modern-compact {
+  /*! end @import */
+  /*! @import https://cu-communityapps.github.io/CD_cwd_events/src/app/dist/cwd_events.css */
+}
+.rlv-modern-compact .card {
+  border: none;
+}
+.rlv-modern-compact .events .field {
+  clear: both;
+}
+.rlv-modern-compact .events time {
+  width: auto;
+  min-height: 0;
+  margin: 0 0 1em;
+}
+.rlv-modern-compact .events time .month {
+  float: left;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  padding: 9px 12px;
+  text-transform: uppercase;
+}
+.rlv-modern-compact .events time .day {
+  float: left;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  padding: 9px 12px;
+}
+.rlv-modern-compact .events h3 {
+  width: 100%;
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: 0.25em;
+  font-family: Iowan Old Style, Georgia, Athelas, Baskerville, Sitka Display, Constansia, serif;
+}
+.rlv-modern-compact .events .meta {
+  color: #767676;
+  font-size: 13px;
+  font-weight: 400;
+}
+.rlv-modern-compact .events-listing > div.events-list > div > div > a {
+  margin: 0px 0 25px 0 !important;
+}
+.rlv-modern-compact .events a.group-link-wrapper {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.rlv-modern-compact .events a:hover h3,
+.rlv-modern-compact .events a:focus h3 {
+  text-decoration: underline;
+  color: #127cb5;
+}
+.rlv-modern-compact .events a:active h3 {
+  color: #000;
+}
+.rlv-modern-compact .events a:hover,
+.rlv-modern-compact .events a:focus {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.05);
+}
+.rlv-modern-compact .events a:active {
+  background: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.09);
+}
+.rlv-modern-compact img {
+  float: left;
+  margin: 0 20px 0px 0px;
+  object-fit: cover;
+  object-position: 100% 0;
+  width: 200px;
+  height: 150px;
+}
+.rlv-modern-compact .group-image {
+  width: 100%;
+}
+.rlv-modern-compact .group-image img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border-bottom: 8px solid #b31b1b;
+  margin-bottom: 1em;
+}
+.rlv-modern-compact .cwd-card-grid .group-image {
+  width: 100%;
+}
+
 .rlv-loading {
   text-align: center;
   margin: auto;
@@ -518,6 +518,16 @@
   word-break: break-word;
 }
 
+.rlv-event-location {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1em;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .rlv-event-title {
   margin-top: 0;
   font-weight: normal;
@@ -536,16 +546,6 @@
 }
 .rlv-event-title a:active {
   color: #666;
-}
-
-.rlv-event-location {
-  text-transform: none;
-  font-weight: normal;
-  font-size: 1em;
-  margin-bottom: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .rlv-event-image {
