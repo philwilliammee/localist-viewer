@@ -1,6 +1,7 @@
 # Localist Viewer
 
-## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs)
+## [Demo Page](https://philwilliammee.github.io/localist-viewer/docs) (Deprecated)
+## [Component Demo Page](https://philwilliammee.github.io/react-localist-viewer/?path=/story/react-localist-viewer-localist-app--calendar)
 
 [Localist viewer](https://www.npmjs.com/package/localist-viewer) is a ES5 module export for [react-localist-viewer](https://www.npmjs.com/package/react-localist-viewer). It bundles up the react component and exports it as a ES5 module and to the dom as window.Localist
 
