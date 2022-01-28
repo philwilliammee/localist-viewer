@@ -39,7 +39,7 @@ CDN:
 from project root start
 
 ```bash
-http-server
+npx http-server
 ```
 
 then open browser at [http://localhost:8080/docs/](http://localhost:8080/docs/)

@@ -1,6 +1,6 @@
 {
   "name": "localist-viewer",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "description": "es5 module - Uses localist api to view events",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -29,6 +29,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^10.0.0",
     "build-url": "^6.0.1",
+    "calendar-link": "^2.1.1",
     "cross-env": "^7.0.3",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-import": "^2.22.1",
@@ -66,7 +67,6 @@
     "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-typescript": "^8.2.1",
     "babel-loader": "^8.2.2",
-    "http-server": "^13.0.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.1",
     "rollup-plugin-css-only": "^3.1.0",
